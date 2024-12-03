@@ -17,8 +17,8 @@ git clone https://github.com/regtab/examples.git
 Go to the project directory: `examples`.
 
 The project structure should be look this one:
-```bash
-regtab-examples
+```
+examples
 |   .gitignore
 |   example1.bat
 |   example1.sh
