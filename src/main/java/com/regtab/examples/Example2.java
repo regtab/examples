@@ -11,8 +11,11 @@ import java.io.IOException;
 
 public class Example2 {
     public static void main(String[] args) throws IOException {
+        final String pathToSourceTable = args[0];
+        final String pathToExtractedRecordset = args[1];
+
         // Create the reader to input the source table from CSV
-        CSVReader csvReader = new CSVReader("data/table2.csv");
+        CSVReader csvReader = new CSVReader(pathToSourceTable);
         // Create the instance of ITM by reading data from the source table
         ITable itm = csvReader.read();
 
@@ -39,7 +42,7 @@ public class Example2 {
         Recordset recordset = itm.extract();
 
         // Store the extracted recordset to the CSV file
-        CSVWriter csvWriter = new CSVWriter("data/recordset2.csv");
+        CSVWriter csvWriter = new CSVWriter(pathToExtractedRecordset);
         csvWriter.write(recordset);
     }
 }

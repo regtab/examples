@@ -1,0 +1,1 @@
+java -cp target/regtab-examples.jar com.regtab.examples.Example1 data/table1.csv data/recordset1.csv
